@@ -5,9 +5,9 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 const ModelComp = ({ modelPath, scale, position }) => {
   const ref = useRef();
   const gltf = useLoader(GLTFLoader, modelPath);
-  const [hovered, SetHover] = useState(false);
+  const [hovered, setHover] = useState(false);
 
-  useFrame((state, delta) => (re.current.rotation.y += 0.01));
+  useFrame((state, delta) => (ref.current.rotation.y += 0.01));
 
   return (
     <primitive
@@ -15,8 +15,10 @@ const ModelComp = ({ modelPath, scale, position }) => {
       object={gltf.scene}
       scale={hovered ? scale * 1.2 : scale}
       position={position}
-      OnPointOver={() => SetHover(true)}
-      OnPointOut={() => SetHover(false)}
+      onPointerOver={() => setHover(true)}
+      onPointerOut={() => setHover(false)}
     />
   );
 };
+
+export default ModelComp;
