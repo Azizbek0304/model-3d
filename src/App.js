@@ -19,7 +19,6 @@
 // }
 
 import React from 'react';
-import './App.css';
 
 //three.js
 import { Canvas } from '@react-three/fiber';
