@@ -10,7 +10,7 @@ Title: Art Gallery
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/artgallerymodel.gltf')
   console.log(nodes?'ture':'false',materials)
   return (
