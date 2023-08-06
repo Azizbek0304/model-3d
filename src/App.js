@@ -23,14 +23,14 @@ import React from 'react';
 //three.js
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import Model from './model/Artgallerymodel';
+// import Model from './model/Artgallerymodel';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Canvas className="canvas">
-          <Model /> //put it here!
+          {/* <Model /> //put it here! */}
           <ambientLight intensity={1} />
           <directionalLight position={[-2, 5, 2]} intensity={1} />
           <OrbitControls enableZoom={false} autoRotate={true} />
